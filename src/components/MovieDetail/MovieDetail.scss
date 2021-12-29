@@ -1,0 +1,81 @@
+@import "../../common/colors.scss";
+.movie {
+  display: flex;
+  flex: 100%;
+  margin: 60px 0;
+  .text {
+    flex: 0.8;
+    h1 {
+      color: $font-primary;
+    }
+    .sub {
+      display: flex;
+      color: $font-secondary;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      &__votes {
+        margin-left: 20px;
+      }
+      &__runtime {
+        margin-left: 20px;
+      }
+      &__year {
+        margin-left: 20px;
+      }
+    }
+    .plot {
+      width: 90%;
+      color: $font-primary;
+    }
+    .info {
+      p {
+        color: $font-primary;
+        margin-top: 20px;
+        span {
+          color: $font-secondary;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  .image {
+    flex: 0.2;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .movie {
+    flex-direction: column;
+    .text {
+      order: 2;
+      h1 {
+        font-size: 30px;
+      }
+      .sub {
+        flex-direction: column;
+
+        &__votes {
+          margin-bottom: 20px;
+          margin-left: 0;
+        }
+        &__runtime {
+          margin-bottom: 20px;
+          margin-left: 0;
+        }
+        &__rating {
+          margin-bottom: 20px;
+          margin-left: 0;
+        }
+        &__year {
+            margin-left: 0;
+          }
+      }
+    }
+    .image {
+      margin-bottom: 40px;
+      order: 1;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
